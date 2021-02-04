@@ -4,21 +4,4 @@ Playing with Nuxt to make a meme generator that replicates top stories on Google
 
 https://news-meme.vercel.app/
 
-## Build Setup
-
-```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+![screenshot of application in browser mockup window](assets/images/news-meme-demo-screenshot.png)
