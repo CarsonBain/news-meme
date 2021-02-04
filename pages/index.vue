@@ -1,5 +1,5 @@
 <template>
-<div class="p-8 container max-w-sm h-screen mx-auto flex flex-wrap flex-col justify-center items-center">
+<div class="px-8 container max-w-sm h-screen mx-auto flex flex-wrap flex-col justify-center items-center">
   <h1 class="self-start mb-8 text-xl">Latest local news</h1>
   <div class="flex space-x-4 w-full">
     <news-card :newsText="newsCardText" :base64Image="uploadedBase64"></news-card>
