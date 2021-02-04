@@ -1,7 +1,7 @@
 <template>
   <div class="border border-solid rounded-xl border-gray-300 font-arial w-full">
     <div
-      class="h-36 w-full bg-center bg-cover rounded-t-xl"
+      class="h-36 w-full bg-center bg-cover rounded-t-lg"
       :style="`background-image: url(${base64Image})`"
     ></div>
     <div class="flex flex-col p-4">
