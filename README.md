@@ -1,6 +1,6 @@
 # news-meme
 
-Playing with Nuxt to make a meme generator that replicates top stories on Google News results.
+Playing with Nuxt to make a meme generator that replicates top stories on Google News results. Deployed on Vercel.
 
 https://news-meme.vercel.app/
 
