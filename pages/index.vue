@@ -7,7 +7,7 @@
   <div class="mt-12 w-full mx-auto flex flex-col justify-center">
     <label for="news-card-text">Add your story headline</label>
     <textarea v-model="newsCardText" id="news-card-text" class="w-full m-auto mt-1 block rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Add your news headline here"></textarea>
-    <label class="mt-3 cursor-pointer px-4 py-2 bg-blue-800 text-white rounded" for="file-upload">Upload an image</label>
+    <label class="text-center mt-4 cursor-pointer px-4 py-3 bg-blue-800 text-white rounded" for="file-upload">Upload an image</label>
     <input class="hidden" type="file" id="file-upload" ref="imageSelector" @change="checkImageFiles" accept="image/*">
   </div>
 </div>
