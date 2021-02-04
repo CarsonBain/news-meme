@@ -1,7 +1,7 @@
 <template>
   <div class="border border-solid rounded-xl border-gray-300 font-arial w-full">
     <div
-      class="h-36 w-full bg-center bg-cover rounded-t-lg"
+      class="h-36 w-full bg-center bg-cover rounded-t-xl"
       :style="`background-image: url(${base64Image})`"
     ></div>
     <div class="flex flex-col p-4">
@@ -12,7 +12,7 @@
         width="66"
         alt="CBC.ca"
       />
-      <p class="text-blue-800 mb-5">{{ newsText }}</p>
+      <p class="text-blue-800 mb-5 break-words">{{ newsText }}</p>
       <div class="text-xs text-gray-600 mt-auto">1 hour ago</div>
     </div>
   </div>
