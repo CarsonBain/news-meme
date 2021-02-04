@@ -2,6 +2,8 @@
 
 Playing with Nuxt to make a meme generator that replicates top stories on Google News results.
 
+https://news-meme.vercel.app/
+
 ## Build Setup
 
 ```bash
