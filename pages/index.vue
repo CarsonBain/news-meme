@@ -49,6 +49,9 @@
         accept="image/*"
       />
     </div>
+    <div class="text-sm text-gray-500">
+      Made by <a class="underline" href="https://dev.carsonbain.com" target="_blank">Carson Bain</a>
+    </div>
   </div>
 </template>
 

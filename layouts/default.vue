@@ -5,7 +5,6 @@
         <NuxtLink to="/" class="uppercase tracking-wider font-bold md:text-xl">
           NewsMeme
         </NuxtLink>
-        <!-- <NuxtLink to="/about">About</NuxtLink> -->
       </div>
     </div>
     <Nuxt />
