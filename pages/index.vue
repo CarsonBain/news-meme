@@ -64,7 +64,8 @@
         @change="checkImageFiles"
         accept="image/*"
       />
-      <button
+      <!-- TODO: Safari throws Permissions error on this for some reason likely because due to async creation of the image it thinks it's not being triggered via a user event (click). Not sure how to fix... https://stackoverflow.com/questions/65356108/how-to-use-clipboard-api-to-write-image-to-clipboard-in-safari -->
+      <!-- <button
         class="mt-2 cursor-pointer px-4 py-3 rounded flex items-center justify-center"
         @click="copyMeme()"
       >
@@ -125,7 +126,7 @@
           </svg>
           <span>Copied!</span>
         </span>
-      </button>
+      </button> -->
     </div>
     <div class="text-sm text-gray-500">
       Made by
@@ -150,40 +151,40 @@ export default {
     };
   },
   methods: {
-    copyMeme() {
-      this.copyLoading = true;
-      this.$html2canvas(this.$refs["capture"], {
-        logging: true,
-        letterRendering: true,
-        allowTaint: false,
-        useCORS: true,
-        scale: (1920 * 2) / window.innerWidth,
-        backgroundColor: null
-      })
-        .then(canvas => {
-          canvas.toBlob(blob => {
-            navigator.clipboard
-              .write([
-                new ClipboardItem(
-                  Object.defineProperty({}, blob.type, {
-                    value: blob,
-                    enumerable: true
-                  })
-                )
-              ])
-              .then(() => {
-                this.copyLoading = false;
-                this.successfullyCopied = true;
-                setTimeout(() => {
-                  this.successfullyCopied = false;
-                }, 1500);
-              });
-          });
-        })
-        .catch(error => {
-          console.log("ERROR COPYING IMAGE", error);
-        });
-    },
+    // copyMeme() {
+    //   this.copyLoading = true;
+    //   this.$html2canvas(this.$refs["capture"], {
+    //     logging: true,
+    //     letterRendering: true,
+    //     allowTaint: false,
+    //     useCORS: true,
+    //     scale: (1920 * 2) / window.innerWidth,
+    //     backgroundColor: null
+    //   })
+    //     .then(canvas => {
+    //       canvas.toBlob(blob => {
+    //         navigator.clipboard
+    //           .write([
+    //             new ClipboardItem(
+    //               Object.defineProperty({}, blob.type, {
+    //                 value: blob,
+    //                 enumerable: true
+    //               })
+    //             )
+    //           ])
+    //           .then(() => {
+    //             this.copyLoading = false;
+    //             this.successfullyCopied = true;
+    //             setTimeout(() => {
+    //               this.successfullyCopied = false;
+    //             }, 1500);
+    //           });
+    //       });
+    //     })
+    //     .catch(error => {
+    //       console.log("ERROR COPYING IMAGE", error);
+    //     });
+    // },
     checkImageFiles() {
       this.uploadedBase64 = "";
       const file = this.$refs.imageSelector.files[0];
