@@ -13,7 +13,7 @@
             width="24"
             height="24"
             viewBox="0 0 24 24"
-            class="text-gray-800"
+            class="text-gray-800 h-5 w-5 md:h-6 md:w-6"
             fill="currentColor"
           >
             <path
